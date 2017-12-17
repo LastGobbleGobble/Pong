@@ -78,7 +78,7 @@ class Ball(pygame.sprite.Sprite):
         if self.rect.right > WIDTH:
             self.rect.right = WIDTH
             self.speedx = -self.speedx
-        if self.rect.left < 0 or self.rect.right > WIDTH:
+        if self.rect.left <= 0 or self.rect.right >= WIDTH:
             pygame.quit() #exits the game
 
     def bounce(self):
